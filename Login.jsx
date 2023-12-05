@@ -5,12 +5,19 @@ import Button from 'react-bootstrap/Button'
 
 
 function Login() {
+
+  function autenticar (event){
+    event.preventDefault()
+    event.target[0]
+    event.target[1]
+  }
+
   return (
     <>
     <Header btn={false}/>
     <Conteudo>
         <h2>Login</h2>
-        <Form>
+        <Form onSubmit={autenticar}>
             <Form.Group className='mb-3'>
                 <Form.Label>Email</Form.Label>
                 <Form.Control type='email' placeholder='Digite seu Email' required/>
