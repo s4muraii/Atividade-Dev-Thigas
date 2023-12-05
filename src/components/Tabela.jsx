@@ -1,7 +1,7 @@
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/esm/Button';
 import axios from 'axios';
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 
 function Tabela() {
 
@@ -18,7 +18,7 @@ function Tabela() {
 
     return (
         <>
-        <button onClick ={()=> setBtnValue}>{btnValue}</button>
+        <button onClick ={()=> setBtnValue ("Atualizado")}>{btnValue}</button>
             <Table>
                 <thead>
                     <tr>
