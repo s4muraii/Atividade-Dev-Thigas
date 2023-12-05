@@ -2,6 +2,8 @@ import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/esm/Button';
 import axios from 'axios';
 import { useState, useEffect} from 'react';
+import Editar from './editar';
+import Excluir from './excluir';
 
 function Tabela() {
 
@@ -35,7 +37,6 @@ function Tabela() {
                             <td>{item.nome}</td>
                             <td>{item.cargo}</td>
                             <td>
-                                <Editar id={item.id} />
                                 <Excluir id={item.id} />
                             </td>
                         </tr>
