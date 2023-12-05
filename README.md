@@ -1,1 +1,0 @@
-Atividade avaliativa realizada na matéria do professor thiago, com conteudo de JSX.
