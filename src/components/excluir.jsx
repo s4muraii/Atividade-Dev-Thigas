@@ -3,6 +3,8 @@ import Button from 'react-bootstrap/Button';
 import { MdDeleteForever } from "react-icons/md";
 import { useState } from 'react';
 import axios from 'axios';
+import Forms from './formulario';
+
 function Excluir({id}) {
 
     const [show, setShow] = useState(false);
@@ -16,6 +18,7 @@ function Excluir({id}) {
             console.log(error);
         });
     }
+
     return (
         <div>
         <span style={{cursor: 'pointer'}} variant="danger" onClick={() => setShow(true)}>
@@ -31,7 +34,6 @@ function Excluir({id}) {
             <Modal.Footer>
                 <Button variant="danger" onClick={ExcluirDados}>Sim</Button>
             </Modal.Footer>
-
         </Modal>
         </div>
     )
