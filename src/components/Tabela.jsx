@@ -35,8 +35,8 @@ function Tabela() {
                             <td>{item.nome}</td>
                             <td>{item.cargo}</td>
                             <td>
-                                <Button className="btn btn-primary me-2">Editar</Button>
-                                <Button className="btn btn-danger">Excluir</Button>
+                                <Editar id={item.id} />
+                                <Excluir id={item.id} />
                             </td>
                         </tr>
                     ))}
