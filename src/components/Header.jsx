@@ -15,12 +15,10 @@ function Header({btn}) {
                     <Navbar.Brand>
                         Minha Empresa
                     </Navbar.Brand>
-                    {btn ? (
                     <div className='d-flex gap-3'>
                         <Button variant="outline-light">Adicionar</Button>
-                        <Button variant="outline-light">Sair</Button>
-                    </div>): ''}
-                    
+                        <Button onClick={sair} variant="outline-light">Sair</Button>
+                    </div>
                 </Conteiner>
             </Navbar>
         </header>
