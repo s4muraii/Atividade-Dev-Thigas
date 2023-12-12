@@ -15,7 +15,6 @@ function Tabela() {
         })
     }, [])
 
-
     return (
         <>
         <button onClick ={()=> setBtnValue ("Atualizado")}>{btnValue}</button>

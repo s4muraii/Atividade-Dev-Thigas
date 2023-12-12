@@ -3,14 +3,12 @@ import Button from 'react-bootstrap/Button';
 import { MdDeleteForever } from "react-icons/md";
 import { useState } from 'react';
 import axios from 'axios';
-import Forms from './formulario';
-
 function Excluir({id}) {
 
     const [show, setShow] = useState(false);
 
     function ExcluirDados(){
-        axios.delete("https://apiaulas.thiagodev502.repl.co/funcionarios/${id}")
+        axios.delete(`https://apiaulas.thiagodev502.repl.co/funcionarios/${id}`)
         .then(() => {
             setShow(false);
             location.reload();
@@ -18,11 +16,10 @@ function Excluir({id}) {
             console.log(error);
         });
     }
-
     return (
         <div>
         <span style={{cursor: 'pointer'}} variant="danger" onClick={() => setShow(true)}>
-                <MdDeleteForever color='red' size={40} />
+                <MdDeleteForever color='red' size={30} />
         </span>
         <Modal show={show} onHide={() => setShow(false)}>
             <Modal.Header closeButton>
@@ -34,6 +31,7 @@ function Excluir({id}) {
             <Modal.Footer>
                 <Button variant="danger" onClick={ExcluirDados}>Sim</Button>
             </Modal.Footer>
+            
         </Modal>
         </div>
     )
