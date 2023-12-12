@@ -34,6 +34,7 @@ function Tabela() {
                             <td>{item.nome}</td>
                             <td>{item.cargo}</td>
                             <td>
+                                <Editar id={item.id} />
                                 <Excluir id={item.id} />
                             </td>
                         </tr>

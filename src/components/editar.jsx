@@ -28,7 +28,7 @@ function Editar({id}) {
                 <h2>Editar</h2>
             </Modal.Header>
             <Modal.Body>
-                <Formulario/>   
+                <Formulario id={id} />   
             </Modal.Body>
             <Modal.Footer>
                 <Button variant="danger" onClick={Dados}>Editar</Button>
