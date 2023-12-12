@@ -8,16 +8,16 @@ import Formulario from './Formulario';
 function Editar({id}) {
 
     const [show, setShow] = useState(false);
+    const [funcionario, setFuncionario] = useState(false)
 
-    function EditarDados(){
-        axios.put(`https://apiaulas.thiagodev502.repl.co/funcionarios/${id}`)
-        .then(() => {
-            setShow(false);
-            location.reload();
-        }).catch((error) => {
-            console.log(error);
-        });
-    }
+    useEffect (() => {
+        axios.get(`https://apiaulas.thiagodev502.repl.co/funcionarios/${id}`).then((resposta) => {
+            setDados(resposta.data)
+        }).catch((erro) => {
+            console.log(erro)
+        })
+    }, [])
+
     return (
         <div>
         <span style={{cursor: 'pointer'}} variant="danger" onClick={() => setShow(true)}>
@@ -28,7 +28,7 @@ function Editar({id}) {
                 <h2>Editar</h2>
             </Modal.Header>
             <Modal.Body>
-                <Formulario id={id} setShow = {setShow}/>   
+                <Formulario id={funcionario} setShow = {setShow}/>   
             </Modal.Body>
             <Modal.Footer>
                 <Button variant="danger" onClick={Dados}>Editar</Button>
